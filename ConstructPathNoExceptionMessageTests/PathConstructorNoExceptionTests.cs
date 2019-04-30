@@ -14,8 +14,8 @@ namespace ConstructPathNoExceptionMessage.Tests
         [TestMethod()]
         public void IputNULLTestNotException()
         {
-            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
-            var result = PathConstructorNoException.ConstructPath(null);
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(null);
             Assert.AreEqual(null , result);
         }
         [TestMethod]
@@ -25,8 +25,8 @@ namespace ConstructPathNoExceptionMessage.Tests
             list.Add(new Tuple<string, string>("two", "three"));
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("four", "two"));
-            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
-            var result = PathConstructorNoException.ConstructPath(list);
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(list);
             Assert.AreEqual(null, result);
         }
 
@@ -37,8 +37,8 @@ namespace ConstructPathNoExceptionMessage.Tests
             list.Add(new Tuple<string, string>("two", "three"));
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("four", null));
-            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
-            var result = PathConstructorNoException.ConstructPath(list);
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(list);
             Assert.AreEqual(null, result);
         }
 
@@ -49,8 +49,8 @@ namespace ConstructPathNoExceptionMessage.Tests
             list.Add(new Tuple<string, string>("two", "three"));
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("four", ""));
-            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
-            var result = PathConstructorNoException.ConstructPath(list);
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(list);
             Assert.AreEqual(null, result);
         }
 
@@ -64,8 +64,8 @@ namespace ConstructPathNoExceptionMessage.Tests
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("two", "five"));
             list.Add(new Tuple<string, string>("four", "five"));
-            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
-            var result = PathConstructorNoException.ConstructPath(list);
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(list);
             Assert.AreEqual(null, result);
         }
 
@@ -78,8 +78,8 @@ namespace ConstructPathNoExceptionMessage.Tests
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("two", "six"));
             list.Add(new Tuple<string, string>("four", "five"));
-            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
-            var result = PathConstructorNoException.ConstructPath(list);
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(list);
             Assert.AreEqual(null, result);
         }
 
@@ -92,8 +92,8 @@ namespace ConstructPathNoExceptionMessage.Tests
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("seven", "two"));
             list.Add(new Tuple<string, string>("four", "five"));
-            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
-            var result = PathConstructorNoException.ConstructPath(list);
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(list);
             Assert.AreEqual(null, result);
         }
 
@@ -106,8 +106,8 @@ namespace ConstructPathNoExceptionMessage.Tests
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("one1", "two1"));
             list.Add(new Tuple<string, string>("two1", "three1"));
-            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
-            var result = PathConstructorNoException.ConstructPath(list);
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(list);
             Assert.AreEqual(null, result);
         }
 
@@ -116,8 +116,8 @@ namespace ConstructPathNoExceptionMessage.Tests
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("two", "three"));
-            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
-            var result = PathConstructorNoException.ConstructPath(list);
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(list);
 
             var firstNotSecond = result.Except(list).ToList();
             Assert.AreEqual(firstNotSecond.Count(), 0, "using ListExcept");
@@ -132,8 +132,8 @@ namespace ConstructPathNoExceptionMessage.Tests
             list.Add(new Tuple<string, string>("four", "five"));
             list.Add(new Tuple<string, string>("one", "two"));
             list.Add(new Tuple<string, string>("three", "four"));
-            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
-            var result = PathConstructorNoException.ConstructPath(list);
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(list);
 
             List<Tuple<string, string>> correctList = new List<Tuple<string, string>>();
             correctList.Add(new Tuple<string, string>("one", "two"));
@@ -144,6 +144,29 @@ namespace ConstructPathNoExceptionMessage.Tests
             Assert.AreEqual(firstNotSecond.Count(), 0, "using ListExcept");
 
         }
+
+        [TestMethod]
+        public void MultiElemWithRepeatingElements()
+        {
+            List<Tuple<string, string>> list = new List<Tuple<string, string>>();
+            list.Add(new Tuple<string, string>("two", "three"));
+            list.Add(new Tuple<string, string>("four", "five"));
+            list.Add(new Tuple<string, string>("one", "two"));
+            list.Add(new Tuple<string, string>("three", "four"));
+            list.Add(new Tuple<string, string>("four", "five"));
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(list);
+
+            List<Tuple<string, string>> correctList = new List<Tuple<string, string>>();
+            correctList.Add(new Tuple<string, string>("one", "two"));
+            correctList.Add(new Tuple<string, string>("two", "three"));
+            correctList.Add(new Tuple<string, string>("three", "four"));
+            correctList.Add(new Tuple<string, string>("four", "five"));
+            var firstNotSecond = result.Except(correctList).ToList();
+            Assert.AreEqual(firstNotSecond.Count(), 0, "using ListExcept");
+
+        }
+
 
         [TestMethod]
         public void OneElementListMyOwnComparatorNoException()
@@ -166,6 +189,28 @@ namespace ConstructPathNoExceptionMessage.Tests
             list.Add(new Tuple<string, string>("three", "four"));
             PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
             var result = PathConstructorNoException.ConstructPath(list);
+
+            List<Tuple<string, string>> correctList = new List<Tuple<string, string>>();
+            correctList.Add(new Tuple<string, string>("one", "two"));
+            correctList.Add(new Tuple<string, string>("two", "three"));
+            correctList.Add(new Tuple<string, string>("three", "four"));
+            correctList.Add(new Tuple<string, string>("four", "five"));
+            var firstNotSecond = result.Except(correctList).ToList();
+            Assert.AreEqual(true, Comparator(result, correctList), "My own Comparator");
+
+        }
+
+        [TestMethod]
+        public void MultiElemWithRepeatingElementsMyComp()
+        {
+            List<Tuple<string, string>> list = new List<Tuple<string, string>>();
+            list.Add(new Tuple<string, string>("two", "three"));
+            list.Add(new Tuple<string, string>("four", "five"));
+            list.Add(new Tuple<string, string>("one", "two"));
+            list.Add(new Tuple<string, string>("three", "four"));
+            list.Add(new Tuple<string, string>("four", "five"));
+            PathConstructorNoException pathConstructorNoException = new PathConstructorNoException();
+            var result = pathConstructorNoException.ConstructPath(list);
 
             List<Tuple<string, string>> correctList = new List<Tuple<string, string>>();
             correctList.Add(new Tuple<string, string>("one", "two"));

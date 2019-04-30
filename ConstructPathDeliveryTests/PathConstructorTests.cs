@@ -156,6 +156,28 @@ namespace ConstructPathDelivery.Tests
         }
 
         [TestMethod]
+        public void MultiElemWithRepeatingElements()
+        {
+            List<Tuple<string, string>> list = new List<Tuple<string, string>>();
+            list.Add(new Tuple<string, string>("two", "three"));
+            list.Add(new Tuple<string, string>("four", "five"));
+            list.Add(new Tuple<string, string>("one", "two"));
+            list.Add(new Tuple<string, string>("three", "four"));
+            list.Add(new Tuple<string, string>("four", "five"));
+            PathConstructor pathConstructor = new PathConstructor();
+            var result = pathConstructor.ConstructPath(list);
+
+            List<Tuple<string, string>> correctList = new List<Tuple<string, string>>();
+            correctList.Add(new Tuple<string, string>("one", "two"));
+            correctList.Add(new Tuple<string, string>("two", "three"));
+            correctList.Add(new Tuple<string, string>("three", "four"));
+            correctList.Add(new Tuple<string, string>("four", "five"));
+            var firstNotSecond = result.Except(correctList).ToList();
+            Assert.AreEqual(firstNotSecond.Count(), 0, "using ListExcept");
+
+        }
+
+        [TestMethod]
         public void OneElementListMyOwnComparator()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
@@ -184,6 +206,28 @@ namespace ConstructPathDelivery.Tests
             correctList.Add(new Tuple<string, string>("four", "five"));
             var firstNotSecond = result.Except(correctList).ToList();
             Assert.AreEqual(true, Comparator(result, correctList), "My own Comparator");
+
+        }
+
+        [TestMethod]
+        public void MultiElemRepeatingElementsMyOwnCompr()
+        {
+            List<Tuple<string, string>> list = new List<Tuple<string, string>>();
+            list.Add(new Tuple<string, string>("two", "three"));
+            list.Add(new Tuple<string, string>("four", "five"));
+            list.Add(new Tuple<string, string>("one", "two"));
+            list.Add(new Tuple<string, string>("three", "four"));
+            list.Add(new Tuple<string, string>("four", "five"));
+            PathConstructor pathConstructor = new PathConstructor();
+            var result = pathConstructor.ConstructPath(list);
+
+            List<Tuple<string, string>> correctList = new List<Tuple<string, string>>();
+            correctList.Add(new Tuple<string, string>("one", "two"));
+            correctList.Add(new Tuple<string, string>("two", "three"));
+            correctList.Add(new Tuple<string, string>("three", "four"));
+            correctList.Add(new Tuple<string, string>("four", "five"));
+            var firstNotSecond = result.Except(correctList).ToList();
+            Assert.AreEqual(firstNotSecond.Count(), 0, "using ListExcept");
 
         }
 
