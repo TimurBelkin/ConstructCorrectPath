@@ -1,0 +1,15 @@
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\bin\Release\ConstructPathNoExceptionMessageTests.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\bin\Release\ConstructPathNoExceptionMessageTests.pdb
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\bin\Release\ConstructPathNoExceptionMessage.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\bin\Release\ConstructPathNoExceptionMessage.pdb
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\obj\Release\ConstructPathNoExceptionMessageTests.csprojResolveAssemblyReference.cache
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\obj\Release\ConstructPathNoExceptionMessageTests.csproj.CoreCompileInputs.cache
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\obj\Release\ConstructPathNoExceptionMessageTests.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessageTests\obj\Release\ConstructPathNoExceptionMessageTests.pdb

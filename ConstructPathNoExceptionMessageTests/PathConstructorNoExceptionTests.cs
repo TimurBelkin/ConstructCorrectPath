@@ -1,87 +1,76 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConstructPathDelivery;
+using ConstructPathNoExceptionMessage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConstructPathDelivery.Tests
+namespace ConstructPathNoExceptionMessage.Tests
 {
     [TestClass()]
-    public class PathConstructorTests
+    public class PathConstructorNoExceptionNoExceptionTests
     {
-        /*
         [TestMethod()]
-        public void ConstructPathTest()
+        public void IputNULLTestNotException()
         {
-            Assert.Fail();
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(null);
+            Assert.AreEqual(null , result);
         }
-        */
-
-        [TestMethod()]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void IputNULLTest()
-        {
-            PathConstructor pathConstructor = new PathConstructor();
-            pathConstructor.ConstructPath(null);
-        }
-
-
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void Circle()
+        public void CirclePaNoException()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("two", "three"));
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("four", "two"));
-            PathConstructor pathConstructor = new PathConstructor();
-            var result = pathConstructor.ConstructPath(list);
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(list);
+            Assert.AreEqual(null, result);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void NullInList()
+        public void NullInListNoException()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("two", "three"));
-            list.Add(new Tuple<string, string>("three", "four")); 
+            list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("four", null));
-            PathConstructor pathConstructor = new PathConstructor();
-            var result = pathConstructor.ConstructPath(list);
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(list);
+            Assert.AreEqual(null, result);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void EmptyElementInList()
+        public void EmptyElementInListNoException()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("two", "three"));
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("four", ""));
-            PathConstructor pathConstructor = new PathConstructor();
-            var result = pathConstructor.ConstructPath(list);
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(list);
+            Assert.AreEqual(null, result);
         }
 
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void CircleTwo()
+        public void CircleTwoNoException()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("one", "two"));
-            list.Add(new Tuple<string, string>("two", "three"));            
+            list.Add(new Tuple<string, string>("two", "three"));
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("two", "five"));
             list.Add(new Tuple<string, string>("four", "five"));
-            PathConstructor pathConstructor = new PathConstructor();
-            var result = pathConstructor.ConstructPath(list);
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(list);
+            Assert.AreEqual(null, result);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void Branch()
+        public void BranchNoException()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("one", "two"));
@@ -89,13 +78,13 @@ namespace ConstructPathDelivery.Tests
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("two", "six"));
             list.Add(new Tuple<string, string>("four", "five"));
-            PathConstructor pathConstructor = new PathConstructor();
-            var result = pathConstructor.ConstructPath(list);
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(list);
+            Assert.AreEqual(null, result);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void BranchTwo()
+        public void BranchTwoNoException()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("one", "two"));
@@ -103,13 +92,13 @@ namespace ConstructPathDelivery.Tests
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("seven", "two"));
             list.Add(new Tuple<string, string>("four", "five"));
-            PathConstructor pathConstructor = new PathConstructor();
-            var result = pathConstructor.ConstructPath(list);
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(list);
+            Assert.AreEqual(null, result);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void TwoPaths()
+        public void TwoPathsNoException()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("one", "two"));
@@ -117,17 +106,18 @@ namespace ConstructPathDelivery.Tests
             list.Add(new Tuple<string, string>("three", "four"));
             list.Add(new Tuple<string, string>("one1", "two1"));
             list.Add(new Tuple<string, string>("two1", "three1"));
-            PathConstructor pathConstructor = new PathConstructor();
-            var result = pathConstructor.ConstructPath(list);
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(list);
+            Assert.AreEqual(null, result);
         }
 
         [TestMethod]
-        public void OneElementList()
+        public void OneElementListNoException()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("two", "three"));
-            PathConstructor pathConstructor = new PathConstructor();
-            var  result = pathConstructor.ConstructPath(list);
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(list);
 
             var firstNotSecond = result.Except(list).ToList();
             Assert.AreEqual(firstNotSecond.Count(), 0, "using ListExcept");
@@ -135,15 +125,15 @@ namespace ConstructPathDelivery.Tests
         }
 
         [TestMethod]
-        public void MultiElementList()
+        public void MultiElementListNoException()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("two", "three"));
             list.Add(new Tuple<string, string>("four", "five"));
             list.Add(new Tuple<string, string>("one", "two"));
-            list.Add(new Tuple<string, string>("three", "four")); 
-            PathConstructor pathConstructor = new PathConstructor();
-            var result = pathConstructor.ConstructPath(list);
+            list.Add(new Tuple<string, string>("three", "four"));
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(list);
 
             List<Tuple<string, string>> correctList = new List<Tuple<string, string>>();
             correctList.Add(new Tuple<string, string>("one", "two"));
@@ -156,26 +146,26 @@ namespace ConstructPathDelivery.Tests
         }
 
         [TestMethod]
-        public void OneElementListMyOwnComparator()
+        public void OneElementListMyOwnComparatorNoException()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("two", "three"));
-            PathConstructor pathConstructor = new PathConstructor();
-            var result = pathConstructor.ConstructPath(list);
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(list);
 
             Assert.AreEqual(true, Comparator(result, list), "My own Comparator");
         }
 
         [TestMethod]
-        public void MultiElementListMyOwnComparator()
+        public void MultiElementListMyOwnComparatorNoException()
         {
             List<Tuple<string, string>> list = new List<Tuple<string, string>>();
             list.Add(new Tuple<string, string>("two", "three"));
             list.Add(new Tuple<string, string>("four", "five"));
             list.Add(new Tuple<string, string>("one", "two"));
             list.Add(new Tuple<string, string>("three", "four"));
-            PathConstructor pathConstructor = new PathConstructor();
-            var result = pathConstructor.ConstructPath(list);
+            PathConstructorNoException PathConstructorNoException = new PathConstructorNoException();
+            var result = PathConstructorNoException.ConstructPath(list);
 
             List<Tuple<string, string>> correctList = new List<Tuple<string, string>>();
             correctList.Add(new Tuple<string, string>("one", "two"));
@@ -187,15 +177,15 @@ namespace ConstructPathDelivery.Tests
 
         }
 
-        public bool Comparator(List<Tuple<string, string>> first, List<Tuple<string, string>> second )
+        public bool Comparator(List<Tuple<string, string>> first, List<Tuple<string, string>> second)
         {
-            if(first == null && second == null)
+            if (first == null && second == null)
             {
                 return true;
             }
-            else if(first != null && second != null)
+            else if (first != null && second != null)
             {
-               if(first.Count != second.Count)
+                if (first.Count != second.Count)
                 {
                     return false;
                 }

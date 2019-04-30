@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructPathDeliveryTests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructPathNoExceptionMessage", "ConstructPathNoExceptionMessage\ConstructPathNoExceptionMessage.csproj", "{8FEC1BCA-043A-4B5D-90AC-FD5EB5655377}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructPathNoExceptionMessageTests", "ConstructPathNoExceptionMessageTests\ConstructPathNoExceptionMessageTests.csproj", "{A67E2C8B-7C19-42E7-8B0E-F8139564CD1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8FEC1BCA-043A-4B5D-90AC-FD5EB5655377}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FEC1BCA-043A-4B5D-90AC-FD5EB5655377}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FEC1BCA-043A-4B5D-90AC-FD5EB5655377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A67E2C8B-7C19-42E7-8B0E-F8139564CD1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A67E2C8B-7C19-42E7-8B0E-F8139564CD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A67E2C8B-7C19-42E7-8B0E-F8139564CD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A67E2C8B-7C19-42E7-8B0E-F8139564CD1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
