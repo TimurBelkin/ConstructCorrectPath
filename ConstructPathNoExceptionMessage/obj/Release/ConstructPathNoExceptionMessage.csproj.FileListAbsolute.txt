@@ -1,0 +1,5 @@
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessage\bin\Release\ConstructPathNoExceptionMessage.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessage\bin\Release\ConstructPathNoExceptionMessage.pdb
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessage\obj\Release\ConstructPathNoExceptionMessage.csproj.CoreCompileInputs.cache
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessage\obj\Release\ConstructPathNoExceptionMessage.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathNoExceptionMessage\obj\Release\ConstructPathNoExceptionMessage.pdb

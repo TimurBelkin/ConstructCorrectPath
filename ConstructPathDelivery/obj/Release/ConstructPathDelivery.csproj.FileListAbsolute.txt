@@ -1,0 +1,5 @@
+C:\Users\btn\source\repos\ConstructPath\ConstructPathDelivery\bin\Release\ConstructPathDelivery.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathDelivery\bin\Release\ConstructPathDelivery.pdb
+C:\Users\btn\source\repos\ConstructPath\ConstructPathDelivery\obj\Release\ConstructPathDelivery.csproj.CoreCompileInputs.cache
+C:\Users\btn\source\repos\ConstructPath\ConstructPathDelivery\obj\Release\ConstructPathDelivery.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPathDelivery\obj\Release\ConstructPathDelivery.pdb

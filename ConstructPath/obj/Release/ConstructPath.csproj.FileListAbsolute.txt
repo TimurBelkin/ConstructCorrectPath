@@ -1,0 +1,11 @@
+C:\Users\btn\source\repos\ConstructPath\ConstructPath\bin\Release\ConstructPath.exe.config
+C:\Users\btn\source\repos\ConstructPath\ConstructPath\bin\Release\ConstructPath.exe
+C:\Users\btn\source\repos\ConstructPath\ConstructPath\bin\Release\ConstructPath.pdb
+C:\Users\btn\source\repos\ConstructPath\ConstructPath\bin\Release\ConstructPathDelivery.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPath\bin\Release\ConstructPathNoExceptionMessage.dll
+C:\Users\btn\source\repos\ConstructPath\ConstructPath\bin\Release\ConstructPathDelivery.pdb
+C:\Users\btn\source\repos\ConstructPath\ConstructPath\bin\Release\ConstructPathNoExceptionMessage.pdb
+C:\Users\btn\source\repos\ConstructPath\ConstructPath\obj\Release\ConstructPath.csprojResolveAssemblyReference.cache
+C:\Users\btn\source\repos\ConstructPath\ConstructPath\obj\Release\ConstructPath.csproj.CoreCompileInputs.cache
+C:\Users\btn\source\repos\ConstructPath\ConstructPath\obj\Release\ConstructPath.exe
+C:\Users\btn\source\repos\ConstructPath\ConstructPath\obj\Release\ConstructPath.pdb
